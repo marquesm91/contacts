@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 /* Stateless Functional Components
    props as first argument
@@ -23,6 +24,11 @@ function ListContacts (props) {
       ))}
     </ol>
   );
+}
+
+ListContacts.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  onDeleteContact: PropTypes.func.isRequired
 }
 
 export default ListContacts;
